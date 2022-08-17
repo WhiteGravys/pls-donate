@@ -1,0 +1,14 @@
+_G.Active = true -- make it false if u want to turn off
+local ChatMessage = {
+   ["Message1"] = "Hey! Its my birthday, i hope i can get new avatar, donate with any amount, thankyou <3", -- change it to whatever do u want
+   ["Message2"] = "I Really Appreciate that if you donate me!",
+   ["Message3"] = "Thankyou!"
+}
+while _G.Active and task.wait() do
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(ChatMessage.Message1, "All")
+task.wait(2)
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(ChatMessage.Message2, "All")
+task.wait(5)
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(ChatMessage.Message3, "All")
+task.wait(20) -- delay
+end
