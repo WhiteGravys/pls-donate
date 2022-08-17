@@ -1,0 +1,8 @@
+local rs = game:GetService("RunService")
+local StarterGui = game:GetService("StarterGui")
+
+StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.All, false)
+rs:Set3dRenderingEnabled(false)
+rs:SetRobloxGuiFocused(false)
+rs:Stop()
+setfpscap(0.5) --change the fps rate to whatever this will affect your cpu
